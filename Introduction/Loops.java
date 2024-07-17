@@ -5,6 +5,26 @@ import java.util.Scanner;
 
 public class Loops {
 
+    // function for nth term of fibonacci
+    public static int nFibonacci(int n){
+        if(n == 0){
+            return 0;
+        }
+        if(n == 1){
+            return 1;
+        }
+        int a = 0, b = 1;
+        int c = 0;
+
+        // Loop to compute the nth Fibonacci number
+        while(n > 1){ // Use n > 1 because you start with a = 0 and b = 1, so n iterations are needed to reach the nth Fibonacci number
+            c = a + b;
+            a = b;
+            b = c;
+            n--;
+        }
+        return c;
+    }
     // function for check the number is prime or not
     public static boolean isPrimeNumber(int num) {
         int i = 2;
@@ -66,6 +86,7 @@ public class Loops {
         System.out.println("\t **************************** MENU *********************************");
         System.out.println("\t Select 1: if you want to check one number is prime or not");
         System.out.println("\t Select 2: if you want to check prime number between the range(1-100");
+        System.out.println("\t Select 3: if you want to get the nth term of fibonacci series.");
         System.out.println("\t ********************************************************************");
 
         System.out.print("\n Enter your choice: ");
@@ -95,6 +116,11 @@ public class Loops {
                 }*/
                 System.out.println(Arrays.toString(range));
                 break;
+            case 3:
+                System.out.println("Enter the nth term that you want from fibonacci series: ");
+                int n = sc.nextInt();
+                int nTerm = nFibonacci(n);
+                System.out.println("The "+ n + "th term of fibonacci is: "+ nTerm);
             default:
                 System.out.println("Please enter a valid choice.");
                 break;
