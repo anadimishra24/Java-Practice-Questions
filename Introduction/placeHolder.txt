@@ -1,0 +1,24 @@
+
+> There are many format specifiers we can use. Here are some common ones:
+
+%c - Character
+%d - Decimal number (base 10)
+%e - Exponential floating-point number
+%f - Floating-point number
+%i - Integer (base 10)
+%o - Octal number (base 8)
+%s - String
+%u - Unsigned decimal (integer) number
+%x - Hexadecimal number (base 16)
+%t - Date/time
+%n - Newline
+
+
+> To print the float or double valur till some digits after decimal
+
+%.3f - float umber to print the value till 3 digits
+        First 100 decimal places 😂
+         pi = 3.1415926535 8979323846 2643383279 5028841971 6939937510 5820974944 5923078164 0628620899 8628034825 3421170679 ...
+
+         Example: float pi = 3.1415926535F;
+                  System.out.printf("pi = %.4f", pi);  // we need to use System.out.printf('placeHolder') instead of System.out.println()
